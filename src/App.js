@@ -21,7 +21,6 @@ function App() {
   
   
   useEffect(()=>{
-    console.log("use effect init")
     const filePath = "/initdata.txt"
     fetch(filePath)
       .then((response)=>{
@@ -31,7 +30,6 @@ function App() {
         return response.text()
       })
       .then((data)=>{
-        console.log(data)
         setText(data)
         let preview = marked.parse(data)
         setPreview(preview)
